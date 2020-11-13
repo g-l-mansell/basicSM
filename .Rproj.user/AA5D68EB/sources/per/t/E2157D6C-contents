@@ -1,0 +1,53 @@
+---
+title: "Statistical Computing 1 - Portfolio 3: Packages, Version Control and Testing"
+output: pdf_document
+geometry: margin=0.8in
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Projects
+
+Projects are a way of organizing your code in R.  
+Typically you would keep R scripts that contain functions in the R folder rather than in a project.  
+(why though? sometimes functions are very project specific?)  
+To run code from another script use:
+
+```{r, execute=FALSE, include=TRUE}
+source("MyFunctions.R")
+```
+
+## Version Control with GitHub
+
+GitHub is a user friendly version control system, which helps users to make their research reproducible and accessible.
+
+To test using GitHub and the Git integration within RStudio, I have created a small test repository:
+https://github.com/g-l-mansell/MyStatisticalComputing1
+
+GitHub can track changes for a directory of files and folders on your local system:
+- Initalise a repository
+- Add files/folders
+- Commit changes with a message
+- Push to github to sync the changes
+
+If the files already exist, GitHub will check for what has changed.
+
+You can:
+  - create a branch if you want to work on a script without altering the "master" version.
+  - create a branch from a previous version of the repository
+  - clone a repository if you want to replicate it in your system
+  - create a fork of a repository, make changes and then use a pull request to ask the maintainer to incorporate the changes
+
+When you set up a new repository it is good practise to create a README.md, .gitignore, and LICENSE file. GitHub provides some default options for these. I've chosen to use the MIT license as it is pretty simple and allows most usage things. The default R.gitignore file means that non-essential files such as .RHistory files are not synced.
+
+The GitHub integration with RStudio asked for my username and password every time I pushed an update. It took me a long time to solve this. 
+I followed this sites instructions to create a personal access token (PAT) https://happygitwithr.com/credential-caching.html
+and this to set up ssh using https://cran.r-project.org/web/packages/credentials/vignettes/intro.html
+
+## R Packages
+
+R 
+
+
