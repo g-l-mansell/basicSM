@@ -85,7 +85,8 @@ cross_validation <- function(X, y, k, FUN=ord_least_squares, ...){
   #create the vector groups to use to allocate samples to k groups
   size <- floor(nrow(X)/k)
   remainder <- nrow(X) %% k
-  groups <- c(rep(seq(1:k), size), seq(1, remainder, length.out = remainder)) 
+  groups <- c(rep(seq(1:k), size), seq(1, remainder, length.out = remainder))
+  set.seed(99)
   groups <- groups[sample(groups, length(groups))]
   
   #for each group, it the model on all the other data, then calculate the testing error
